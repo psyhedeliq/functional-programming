@@ -44,7 +44,7 @@ const orders = [
 ];
 
 let totalAmount = orders.reduce((sum, order) => {
-  console.log("hello", sum, order);
+  // console.log("hello", sum, order);
   return sum + order.amount;
 }, 0);
 //******************** reduce (the old way) ********************//
@@ -54,4 +54,26 @@ for (let i = 0; i < orders.length; i++) {
   totalAmount += orders[i].amount;
 }
 */
-console.log(totalAmount);
+// console.log(totalAmount);
+
+//******************** reduce advanced ********************//
+// to run this use: 'node functional-programming.js' in the bash command line
+// const fs = require("fs");
+
+// const output = fs
+//   .readFileSync("data.txt", "utf8")
+//   .trim()
+//   .split("\n")
+//   .map(line => line.split("\t"))
+//   .reduce((customers, line) => {
+//     // console.log("hello", line);
+//     customers[line[0]] = customers[line[0]] || [];
+//     customers[line[0]].push({
+//       name: line[1],
+//       price: line[2],
+//       quantity: line[3]
+//     });
+//     return customers;
+//   }, {});
+
+// console.log("output", JSON.stringify(output, null, 2));
