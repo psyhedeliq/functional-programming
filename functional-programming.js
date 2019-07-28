@@ -77,3 +77,23 @@ for (let i = 0; i < orders.length; i++) {
 //   }, {});
 
 // console.log("output", JSON.stringify(output, null, 2));
+
+//******************** closures ********************//
+const me = "Cornel Filip";
+const greetMe = () => {
+  console.log("Hello, " + me + "!");
+};
+// greetMe();
+
+//******************** currying ********************//
+
+//****************** currying (normal version) ******************//
+let dragon = (name, size, element) => {
+  return name + " is a " + size + " dragon that breathes " + element + "!";
+};
+// console.log(dragon("fluffykins", "tiny", "lightning"));
+
+//******************** currying version ********************//
+let dragon1 = name => size => element =>
+  name + " is a " + size + " dragon that breathes " + element + "!";
+console.log(dragon1("fluffykins")("tiny")("lightning"));
