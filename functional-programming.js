@@ -143,3 +143,19 @@ let makeTree = (categories, parent) => {
     }
   }
 }*/
+
+//******************** streams (functor) ********************//
+// functor is something tat implements the map method
+// to run this use: 'node functional-programming.js' in the bash command line
+// const fs = require("fs");
+// const highland = require("highland");
+// highland(fs.createReadStream("customers.csv", "utf8"))
+//   .split()
+//   .map(line => line.split(","))
+//   .map(parts => ({
+//     name: parts[0],
+//     numPurchases: parts[1]
+//   }))
+//   .filter(customer => customer.numPurchases > 2)
+//   .map(customer => customer.name)
+//   .each(x => console.log("each ", x));
